@@ -2,135 +2,92 @@
 <html>
 <head>
 <style>
-    @page {
-        size: letter landscape;
-        margin: 0;
-    }
-    body {
-        margin: 0;
-        padding: 0;
-        font-family: 'Segoe UI', Arial, sans-serif;
-        background-color: #f0f9ff;
-    }
+    @page { size: letter landscape; margin: 0; }
+    body { margin: 0; padding: 0; font-family: 'Arial', sans-serif; background-color: #f8fafc; }
     .page {
-        width: 11in;
-        height: 8.5in;
-        position: relative;
-        overflow: hidden;
-        border: 2px dashed #94a3b8;
-        page-break-after: always;
-        background: linear-gradient(to bottom, #e0f2fe 0%, #f8fafc 100%);
+        width: 11in; height: 8.5in; position: relative; overflow: hidden;
+        border: 1px solid #cbd5e1; page-break-after: always;
+        background: linear-gradient(to bottom, #e0f2fe 0%, #ffffff 100%);
     }
-    .title {
-        text-align: center;
-        width: 100%;
-        padding-top: 25px;
-        font-size: 30pt;
-        font-weight: bold;
-        color: #0f172a;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-    }
+    .title { text-align: center; padding-top: 20px; font-size: 28pt; font-weight: bold; color: #1e293b; }
     .stone {
-        position: absolute;
-        width: 70px;
-        height: 60px;
-        border: 3px solid #475569;
-        border-radius: 40% 60% 50% 50%;
-        background: #f1f5f9;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 3px 3px 0px #94a3b8;
-        z-index: 10;
+        position: absolute; width: 85px; height: 70px;
+        border: 3px solid #475569; border-radius: 50% 40% 60% 45%;
+        background: #f1f5f9; display: flex; flex-direction: column;
+        align-items: center; justify-content: center; box-shadow: 4px 4px 0px #94a3b8;
     }
-    .day-num { font-size: 18pt; font-weight: bold; color: #1e293b; line-height: 1; }
-    .date-label { font-size: 7pt; color: #64748b; font-weight: bold; }
-    
-    /* Milestone Colors */
-    .m-5 { background: #dcfce7; border-color: #22c55e; } /* 5th Stone */
-    .m-10 { background: #dbeafe; border-color: #3b82f6; border-width: 5px; transform: scale(1.1); } /* 10th Stone */
-    .start { background: #fef08a; border-color: #eab308; }
-    .finish { background: #fee2e2; border-color: #ef4444; width: 100px; }
-
-    /* Scenery */
-    .scenery { position: absolute; z-index: 1; opacity: 0.6; pointer-events: none; }
-    .mtn { font-size: 150pt; bottom: -20px; color: #cbd5e1; }
-    .tree { font-size: 40pt; color: #166534; }
-    .cloud { font-size: 50pt; color: white; }
+    .day-num { font-size: 20pt; font-weight: bold; color: #0f172a; }
+    .date-label { font-size: 8pt; color: #64748b; font-weight: bold; }
+    .m-5 { background: #dcfce7; border-color: #22c55e; } 
+    .m-10 { background: #dbeafe; border-color: #3b82f6; border-width: 5px; transform: scale(1.1); }
+    .special { background: #fef08a; border-color: #eab308; }
+    .finish { background: #fee2e2; border-color: #ef4444; width: 120px; }
+    .scenery { position: absolute; opacity: 0.4; z-index: 1; pointer-events: none; font-size: 60pt; }
 </style>
 </head>
 <body>
 
 <div class="page">
     <div class="title">Wilson Children Summer Adventure 2026</div>
-    
-    <div class="scenery mtn" style="left: -20px;">⛰️</div>
-    <div class="scenery cloud" style="top: 80px; left: 100px;">☁️</div>
-    <div class="scenery tree" style="top: 150px; right: 80px;">🌲</div>
+    <div class="scenery" style="top:100px; left:50px;">☁️</div>
+    <div class="scenery" style="bottom:100px; right:50px;">⛰️</div>
 
-    <div class="stone start" style="top:120px; left:60px;">START</div>
-    <div class="stone" style="top:180px; left:130px;"><span class="day-num">1</span><span class="date-label">Jun 1</span></div>
-    <div class="stone" style="top:250px; left:180px;"><span class="day-num">2</span><span class="date-label">Jun 2</span></div>
-    <div class="stone" style="top:320px; left:210px;"><span class="day-num">3</span><span class="date-label">Jun 3</span></div>
-    <div class="stone" style="top:390px; left:200px;"><span class="day-num">4</span><span class="date-label">Jun 4</span></div>
-    <div class="stone m-5" style="top:460px; left:160px;"><span class="day-num">5</span><span class="date-label">Jun 5</span></div>
-    
-    <div class="stone" style="top:530px; left:120px;"><span class="day-num">6</span><span class="date-label">Jun 8</span></div>
-    <div class="stone" style="top:600px; left:140px;"><span class="day-num">7</span><span class="date-label">Jun 9</span></div>
-    <div class="stone" style="top:660px; left:210px;"><span class="day-num">8</span><span class="date-label">Jun 10</span></div>
-    <div class="stone" style="top:650px; left:300px;"><span class="day-num">9</span><span class="date-label">Jun 11</span></div>
-    <div class="stone m-10" style="top:600px; left:380px;"><span class="day-num">10</span><span class="date-label">Jun 12</span></div>
-    
-    <div class="stone" style="top:530px; left:410px;"><span class="day-num">11</span><span class="date-label">Jun 15</span></div>
-    <div class="stone" style="top:460px; left:440px;"><span class="day-num">12</span><span class="date-label">Jun 16</span></div>
-    <div class="stone" style="top:390px; left:470px;"><span class="day-num">13</span><span class="date-label">Jun 17</span></div>
-    <div class="stone" style="top:320px; left:510px;"><span class="day-num">14</span><span class="date-label">Jun 18</span></div>
-    <div class="stone m-5" style="top:250px; left:560px;"><span class="day-num">15</span><span class="date-label">Jun 22</span></div>
-    
-    <div class="stone" style="top:180px; left:620px;"><span class="day-num">16</span><span class="date-label">Jun 23</span></div>
-    <div class="stone" style="top:130px; left:710px;"><span class="day-num">17</span><span class="date-label">Jun 24</span></div>
-    <div class="stone" style="top:160px; left:800px;"><span class="day-num">18</span><span class="date-label">Jun 25</span></div>
-    <div class="stone" style="top:240px; left:840px;"><span class="day-num">19</span><span class="date-label">Jun 26</span></div>
-    <div class="stone m-10" style="top:320px; left:860px;"><span class="day-num">20</span><span class="date-label">Jun 29</span></div>
-    <div class="stone" style="top:400px; left:840px;"><span class="day-num">21</span><span class="date-label">Jun 30</span></div>
-    
-    <div class="stone" style="top:740px; left:500px;"><span class="day-num">22</span><span class="date-label">Jul 1</span></div>
+    <div class="stone special" style="top:120px; left:80px;">START</div>
+    <div class="stone" style="top:120px; left:200px;"><span class="day-num">1</span><span class="date-label">Jun 1</span></div>
+    <div class="stone" style="top:120px; left:320px;"><span class="day-num">2</span><span class="date-label">Jun 2</span></div>
+    <div class="stone" style="top:120px; left:440px;"><span class="day-num">3</span><span class="date-label">Jun 3</span></div>
+    <div class="stone" style="top:120px; left:560px;"><span class="day-num">4</span><span class="date-label">Jun 4</span></div>
+    <div class="stone m-5" style="top:120px; left:680px;"><span class="day-num">5</span><span class="date-label">Jun 5</span></div>
+    <div class="stone" style="top:120px; left:800px;"><span class="day-num">6</span><span class="date-label">Jun 8</span></div>
+    <div class="stone" style="top:120px; left:920px;"><span class="day-num">7</span><span class="date-label">Jun 9</span></div>
+
+    <div class="stone" style="top:250px; left:920px;"><span class="day-num">8</span><span class="date-label">Jun 10</span></div>
+    <div class="stone" style="top:250px; left:800px;"><span class="day-num">9</span><span class="date-label">Jun 11</span></div>
+    <div class="stone m-10" style="top:250px; left:680px;"><span class="day-num">10</span><span class="date-label">Jun 12</span></div>
+    <div class="stone" style="top:250px; left:560px;"><span class="day-num">11</span><span class="date-label">Jun 15</span></div>
+    <div class="stone" style="top:250px; left:440px;"><span class="day-num">12</span><span class="date-label">Jun 16</span></div>
+    <div class="stone" style="top:250px; left:320px;"><span class="day-num">13</span><span class="date-label">Jun 17</span></div>
+    <div class="stone" style="top:250px; left:200px;"><span class="day-num">14</span><span class="date-label">Jun 18</span></div>
+    <div class="stone m-5" style="top:250px; left:80px;"><span class="day-num">15</span><span class="date-label">Jun 22</span></div>
+
+    <div class="stone" style="top:380px; left:80px;"><span class="day-num">16</span><span class="date-label">Jun 23</span></div>
+    <div class="stone" style="top:380px; left:200px;"><span class="day-num">17</span><span class="date-label">Jun 24</span></div>
+    <div class="stone" style="top:380px; left:320px;"><span class="day-num">18</span><span class="date-label">Jun 25</span></div>
+    <div class="stone" style="top:380px; left:440px;"><span class="day-num">19</span><span class="date-label">Jun 26</span></div>
+    <div class="stone m-10" style="top:380px; left:560px;"><span class="day-num">20</span><span class="date-label">Jun 29</span></div>
+    <div class="stone" style="top:380px; left:680px;"><span class="day-num">21</span><span class="date-label">Jun 30</span></div>
+
+    <div class="stone" style="top:700px; left:475px;"><span class="day-num">22</span><span class="date-label">Jul 1</span></div>
 </div>
 
 <div class="page">
-    <div class="scenery mtn" style="right: -20px;">⛰️</div>
-    <div class="scenery tree" style="bottom: 80px; left: 100px;">🌲</div>
-    <div class="scenery tree" style="top: 200px; left: 40px;">🌲</div>
+    <div class="scenery" style="top:100px; left:800px;">🌲</div>
+    <div class="scenery" style="bottom:150px; left:100px;">🌲</div>
 
-    <div class="stone" style="top:20px; left:500px;"><span class="day-num">23</span><span class="date-label">Jul 2</span></div>
-    
-    <div class="stone" style="top:90px; left:440px;"><span class="day-num">24</span><span class="date-label">Jul 6</span></div>
-    <div class="stone m-5" style="top:160px; left:390px;"><span class="day-num">25</span><span class="date-label">Jul 15</span></div>
-    <div class="stone" style="top:230px; left:360px;"><span class="day-num">26</span><span class="date-label">Jul 16</span></div>
-    <div class="stone" style="top:300px; left:340px;"><span class="day-num">27</span><span class="date-label">Jul 17</span></div>
-    <div class="stone" style="top:370px; left:370px;"><span class="day-num">28</span><span class="date-label">Jul 20</span></div>
-    <div class="stone" style="top:440px; left:410px;"><span class="day-num">29</span><span class="date-label">Jul 21</span></div>
-    <div class="stone m-10" style="top:510px; left:480px;"><span class="day-num">30</span><span class="date-label">Jul 22</span></div>
-    
-    <div class="stone" style="top:580px; left:550px;"><span class="day-num">31</span><span class="date-label">Jul 23</span></div>
-    <div class="stone" style="top:650px; left:580px;"><span class="day-num">32</span><span class="date-label">Jul 24</span></div>
-    <div class="stone" style="top:720px; left:540px;"><span class="day-num">33</span><span class="date-label">Jul 27</span></div>
-    <div class="stone" style="top:720px; left:440px;"><span class="day-num">34</span><span class="date-label">Jul 28</span></div>
-    <div class="stone m-5" style="top:680px; left:350px;"><span class="day-num">35</span><span class="date-label">Jul 29</span></div>
-    
-    <div class="stone" style="top:610px; left:280px;"><span class="day-num">36</span><span class="date-label">Jul 30</span></div>
-    <div class="stone" style="top:540px; left:230px;"><span class="day-num">37</span><span class="date-label">Jul 31</span></div>
-    <div class="stone" style="top:470px; left:180px;"><span class="day-num">38</span><span class="date-label">Aug 3</span></div>
-    <div class="stone" style="top:400px; left:140px;"><span class="day-num">39</span><span class="date-label">Aug 4</span></div>
-    <div class="stone m-10" style="top:330px; left:110px;"><span class="day-num">40</span><span class="date-label">Aug 5</span></div>
-    
-    <div class="stone" style="top:260px; left:150px;"><span class="day-num">41</span><span class="date-label">Aug 6</span></div>
-    <div class="stone" style="top:190px; left:220px;"><span class="day-num">42</span><span class="date-label">Aug 7</span></div>
-    <div class="stone" style="top:120px; left:300px;"><span class="day-num">43</span><span class="date-label">FINAL</span></div>
-    
-    <div class="stone finish" style="top:60px; left:350px;">FINISH!</div>
+    <div class="stone" style="top:30px; left:475px;"><span class="day-num">23</span><span class="date-label">Jul 2</span></div>
+
+    <div class="stone" style="top:160px; left:80px;"><span class="day-num">24</span><span class="date-label">Jul 6</span></div>
+    <div class="stone m-5" style="top:160px; left:200px;"><span class="day-num">25</span><span class="date-label">Jul 15</span></div>
+    <div class="stone" style="top:160px; left:320px;"><span class="day-num">26</span><span class="date-label">Jul 16</span></div>
+    <div class="stone" style="top:160px; left:440px;"><span class="day-num">27</span><span class="date-label">Jul 17</span></div>
+    <div class="stone" style="top:160px; left:560px;"><span class="day-num">28</span><span class="date-label">Jul 20</span></div>
+    <div class="stone" style="top:160px; left:680px;"><span class="day-num">29</span><span class="date-label">Jul 21</span></div>
+    <div class="stone m-10" style="top:160px; left:800px;"><span class="day-num">30</span><span class="date-label">Jul 22</span></div>
+    <div class="stone" style="top:160px; left:920px;"><span class="day-num">31</span><span class="date-label">Jul 23</span></div>
+
+    <div class="stone" style="top:290px; left:920px;"><span class="day-num">32</span><span class="date-label">Jul 24</span></div>
+    <div class="stone" style="top:290px; left:800px;"><span class="day-num">33</span><span class="date-label">Jul 27</span></div>
+    <div class="stone" style="top:290px; left:680px;"><span class="day-num">34</span><span class="date-label">Jul 28</span></div>
+    <div class="stone m-5" style="top:290px; left:560px;"><span class="day-num">35</span><span class="date-label">Jul 29</span></div>
+    <div class="stone" style="top:290px; left:440px;"><span class="day-num">36</span><span class="date-label">Jul 30</span></div>
+    <div class="stone" style="top:290px; left:320px;"><span class="day-num">37</span><span class="date-label">Jul 31</span></div>
+    <div class="stone" style="top:290px; left:200px;"><span class="day-num">38</span><span class="date-label">Aug 3</span></div>
+    <div class="stone" style="top:290px; left:80px;"><span class="day-num">39</span><span class="date-label">Aug 4</span></div>
+
+    <div class="stone m-10" style="top:420px; left:80px;"><span class="day-num">40</span><span class="date-label">Aug 5</span></div>
+    <div class="stone" style="top:420px; left:200px;"><span class="day-num">41</span><span class="date-label">Aug 6</span></div>
+    <div class="stone" style="top:420px; left:320px;"><span class="day-num">42</span><span class="date-label">Aug 7</span></div>
+    <div class="stone finish" style="top:550px; left:460px;">ADVENTURE COMPLETE!</div>
 </div>
 
 </body>
