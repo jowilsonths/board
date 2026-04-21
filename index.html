@@ -15,22 +15,29 @@
         border: 3px solid #475569; border-radius: 50% 40% 60% 45%;
         background: #f1f5f9; display: flex; flex-direction: column;
         align-items: center; justify-content: center; box-shadow: 3px 3px 0px #94a3b8; z-index: 10;
+        text-align: center;
     }
     .day-num { font-size: 19pt; font-weight: bold; color: #0f172a; line-height: 1; }
     .date-label { font-size: 7.5pt; color: #64748b; font-weight: bold; }
     .m-5 { background: #dcfce7; border-color: #22c55e; } 
     .m-10 { background: #dbeafe; border-color: #3b82f6; border-width: 4px; }
     .start-stone { background: #fef08a; border-color: #eab308; font-weight: bold; }
-    .finish-stone { background: #fee2e2; border-color: #ef4444; width: 160px; font-weight: bold; color: #b91c1c; }
-    .scenery { position: absolute; opacity: 0.5; z-index: 1; pointer-events: none; }
+    .finish-stone { 
+        background: #fee2e2; border-color: #ef4444; width: 140px; height: 80px;
+        font-weight: bold; color: #b91c1c; font-size: 14pt; line-height: 1.2;
+    }
+    .scenery { position: absolute; opacity: 0.45; z-index: 1; pointer-events: none; }
 </style>
 </head>
 <body>
 
 <div class="page">
     <div class="title">Wilson Children Summer Adventure 2026</div>
+    
     <div class="scenery" style="top: 80px; right: 100px; font-size: 40pt;">☁️</div>
-    <div class="scenery" style="bottom: 100px; left: 400px; font-size: 80pt;">⛰️</div>
+    <div class="scenery" style="top: 150px; left: 600px; font-size: 50pt;">⛰️</div>
+    <div class="scenery" style="bottom: 120px; left: 400px; font-size: 80pt;">⛰️</div>
+    <div class="scenery" style="top: 400px; right: 50px; font-size: 30pt;">🌲</div>
 
     <div class="stone start-stone" style="top:100px; left:60px;">START</div>
     <div class="stone" style="top:140px; left:160px;"><span class="day-num">1</span><span class="date-label">Jun 1</span></div>
@@ -61,8 +68,14 @@
 </div>
 
 <div class="page">
-    <div class="scenery" style="top: 100px; right: 150px; font-size: 90pt;">⛰️</div>
-    <div class="scenery" style="bottom: 80px; left: 80px; font-size: 60pt;">🌲</div>
+    <div class="scenery" style="top: 80px; right: 150px; font-size: 95pt;">⛰️</div>
+    <div class="scenery" style="top: 250px; left: 100px; font-size: 70pt;">⛰️</div>
+    <div class="scenery" style="bottom: 100px; left: 350px; font-size: 85pt;">⛰️</div>
+    <div class="scenery" style="top: 400px; left: 20px; font-size: 40pt;">🌲</div>
+    <div class="scenery" style="top: 150px; left: 300px; font-size: 35pt;">🌲</div>
+    <div class="scenery" style="bottom: 50px; right: 150px; font-size: 50pt;">🌲</div>
+    <div class="scenery" style="top: 50px; left: 100px; font-size: 30pt;">☁️</div>
+    <div class="scenery" style="bottom: 300px; right: 50px; font-size: 45pt;">☁️</div>
 
     <div class="stone" style="top:20px; left:450px;"><span class="day-num">23</span><span class="date-label">Jul 2</span></div>
     
@@ -88,8 +101,7 @@
     <div class="stone" style="top:710px; left:300px;"><span class="day-num">41</span><span class="date-label">Aug 6</span></div>
     <div class="stone" style="top:750px; left:410px;"><span class="day-num">42</span><span class="date-label">Aug 7</span></div>
     
-    <div class="stone" style="top:720px; left:520px;"><span class="day-num">43</span><span class="date-label">FINAL</span></div>
-    <div class="stone finish-stone" style="top:720px; left:630px;">ADVENTURE COMPLETE!</div>
+    <div class="stone finish-stone" style="top:735px; left:530px;">ADVENTURE<br>COMPLETE!</div>
 </div>
 
 </body>
