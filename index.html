@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 <head>
 <style>
@@ -8,152 +9,121 @@
     body {
         margin: 0;
         padding: 0;
-        font-family: 'Arial', sans-serif;
-        background-color: #f0f4f8;
+        font-family: 'Helvetica', 'Arial', sans-serif;
+        background-color: #f9f9f9;
     }
-    .poster-page {
+    .page {
         width: 11in;
         height: 8.5in;
         position: relative;
         overflow: hidden;
-        border: 2px dashed #bdc3c7;
+        border: 1px solid #ccc;
         page-break-after: always;
-        background: #fdfdfd;
+        background: white;
     }
-    .title-banner {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        right: 0;
+    .title {
         text-align: center;
-        font-size: 32pt;
-        color: #2c3e50;
-        font-weight: bold;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-    }
-    .trail-container {
-        position: absolute;
         width: 100%;
-        height: 100%;
+        padding-top: 20px;
+        font-size: 28pt;
+        font-weight: bold;
+        color: #2c3e50;
     }
     .stone {
-        width: 60px;
-        height: 50px;
-        background: #ecf0f1;
-        border: 3px solid #95a5a6;
-        border-radius: 40% 60% 50% 50%;
         position: absolute;
+        width: 75px;
+        height: 65px;
+        border: 3px solid #7f8c8d;
+        border-radius: 50% 40% 60% 40%;
+        background: #ecf0f1;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: center;
+        box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+    }
+    .day-num {
+        font-size: 18pt;
         font-weight: bold;
-        color: #7f8c8d;
-        box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+        margin-bottom: -2px;
     }
-    .milestone-5 {
-        background: #d5e8d4;
-        border-color: #82b366;
-        color: #2d4123;
+    .date-label {
+        font-size: 7pt;
+        color: #34495e;
     }
-    .milestone-10 {
-        background: #dae8fc;
-        border-color: #6c8ebf;
-        color: #1e3a5f;
-        transform: scale(1.15);
-        border-width: 4px;
-    }
-    .decoration {
-        position: absolute;
-        font-size: 40pt;
-        opacity: 0.3;
-    }
-    .mountain { bottom: 50px; right: 50px; font-size: 150pt; color: #95a5a6; }
-    .tree { font-size: 40pt; color: #27ae60; }
-    .instructions {
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        font-size: 10pt;
-        color: #7f8c8d;
-        background: rgba(255,255,255,0.8);
-        padding: 5px;
-        border-radius: 5px;
-    }
+    /* Milestone Styling */
+    .milestone-5 { background: #d5e8d4; border-color: #82b366; }
+    .milestone-10 { background: #dae8fc; border-color: #6c8ebf; border-width: 5px; transform: scale(1.1); }
+    
+    .start-stone { background: #f1c40f; border-color: #f39c12; font-weight: bold; }
+    .finish-stone { background: #e74c3c; border-color: #c0392b; color: white; font-weight: bold; }
+
+    /* Decorative Elements */
+    .mountain { position: absolute; font-size: 120pt; color: #dfe6e9; z-index: 0; bottom: 20px; right: 20px; }
+    .tree { position: absolute; font-size: 30pt; color: #2ecc71; z-index: 0; }
 </style>
 </head>
 <body>
-    <div class="poster-page">
-        <div class="title-banner">Summer Expedition: The Mountain Trail</div>
-        <div class="decoration mountain">⛰️</div>
-        <div class="decoration tree" style="top:150px; left:100px;">🌲</div>
-        <div class="stone" style="top:600px; left:100px; background:#f1c40f; color:#000;">START</div>
-        
-        <div class="stone" style="top:550px; left:180px;">1</div>
-        <div class="stone" style="top:480px; left:230px;">2</div>
-        <div class="stone" style="top:400px; left:250px;">3</div>
-        <div class="stone" style="top:320px; left:280px;">4</div>
-        <div class="stone milestone-5" style="top:250px; left:350px;">5</div>
-        <div class="stone" style="top:230px; left:440px;">6</div>
-        <div class="stone" style="top:260px; left:530px;">7</div>
-        <div class="stone" style="top:320px; left:600px;">8</div>
-        <div class="stone" style="top:390px; left:650px;">9</div>
-        <div class="stone milestone-10" style="top:470px; left:720px;">10 ★</div>
-        <div class="stone" style="top:530px; left:820px;">11</div>
-        
-        <div class="instructions">Page 1 of 4: Tape edges to Page 2.</div>
-    </div>
 
-    <div class="poster-page">
-        <div class="decoration tree" style="top:100px; right:150px;">🌲</div>
-        <div class="stone" style="top:530px; left:50px;">12</div>
-        <div class="stone" style="top:450px; left:100px;">13</div>
-        <div class="stone" style="top:370px; left:140px;">14</div>
-        <div class="stone milestone-5" style="top:290px; left:180px;">15</div>
-        <div class="stone" style="top:210px; left:220px;">16</div>
-        <div class="stone" style="top:150px; left:300px;">17</div>
-        <div class="stone" style="top:120px; left:400px;">18</div>
-        <div class="stone" style="top:150px; left:500px;">19</div>
-        <div class="stone milestone-10" style="top:200px; left:600px;">20 ★</div>
-        <div class="stone" style="top:280px; left:660px;">21</div>
-        <div class="stone" style="top:360px; left:700px;">22</div>
-        
-        <div class="instructions">Page 2 of 4: Tape edges to Page 1 and 3.</div>
-    </div>
+<div class="page">
+    <div class="title">Summer Expedition: Page 1</div>
+    <div class="mountain">⛰️</div>
+    <div class="tree" style="top:100px; left:50px;">🌲</div>
+    
+    <div class="stone start-stone" style="top:650px; left:50px;">START</div>
 
-    <div class="poster-page">
-        <div class="decoration mountain" style="top:50px; left:50px;">🏔️</div>
-        <div class="stone" style="top:360px; left:50px;">23</div>
-        <div class="stone" style="top:440px; left:100px;">24</div>
-        <div class="stone milestone-5" style="top:520px; left:180px;">25</div>
-        <div class="stone" style="top:580px; left:280px;">26</div>
-        <div class="stone" style="top:600px; left:380px;">27</div>
-        <div class="stone" style="top:580px; left:480px;">28</div>
-        <div class="stone" style="top:520px; left:580px;">29</div>
-        <div class="stone milestone-10" style="top:440px; left:650px;">30 ★</div>
-        <div class="stone" style="top:360px; left:720px;">31</div>
-        <div class="stone" style="top:280px; left:780px;">32</div>
-        <div class="stone" style="top:200px; left:840px;">33</div>
-        
-        <div class="instructions">Page 3 of 4: Tape edges to Page 2 and 4.</div>
-    </div>
+    <div class="stone" style="top:600px; left:140px;"><span class="day-num">1</span><span class="date-label">June 1</span></div>
+    <div class="stone" style="top:520px; left:160px;"><span class="day-num">2</span><span class="date-label">June 2</span></div>
+    <div class="stone" style="top:440px; left:180px;"><span class="day-num">3</span><span class="date-label">June 3</span></div>
+    <div class="stone" style="top:360px; left:220px;"><span class="day-num">4</span><span class="date-label">June 4</span></div>
+    <div class="stone milestone-5" style="top:300px; left:300px;"><span class="day-num">5</span><span class="date-label">June 5</span></div>
+    <div class="stone" style="top:260px; left:390px;"><span class="day-num">6</span><span class="date-label">June 8</span></div>
+    <div class="stone" style="top:280px; left:480px;"><span class="day-num">7</span><span class="date-label">June 9</span></div>
+    <div class="stone" style="top:340px; left:550px;"><span class="day-num">8</span><span class="date-label">June 10</span></div>
+    <div class="stone" style="top:420px; left:580px;"><span class="day-num">9</span><span class="date-label">June 11</span></div>
+    <div class="stone milestone-10" style="top:500px; left:650px;"><span class="day-num">10</span><span class="date-label">June 12</span></div>
+    <div class="stone" style="top:580px; left:730px;"><span class="day-num">11</span><span class="date-label">June 15</span></div>
+    <div class="stone" style="top:640px; left:820px;"><span class="day-num">12</span><span class="date-label">June 16</span></div>
+    <div class="stone" style="top:580px; left:910px;"><span class="day-num">13</span><span class="date-label">June 17</span></div>
+    <div class="stone" style="top:500px; left:930px;"><span class="day-num">14</span><span class="date-label">June 18</span></div>
+    <div class="stone milestone-5" style="top:420px; left:900px;"><span class="day-num">15</span><span class="date-label">June 22</span></div>
+    <div class="stone" style="top:340px; left:860px;"><span class="day-num">16</span><span class="date-label">June 23</span></div>
+    <div class="stone" style="top:260px; left:820px;"><span class="day-num">17</span><span class="date-label">June 24</span></div>
+    <div class="stone" style="top:180px; left:780px;"><span class="day-num">18</span><span class="date-label">June 25</span></div>
+    <div class="stone" style="top:120px; left:700px;"><span class="day-num">19</span><span class="date-label">June 26</span></div>
+    <div class="stone milestone-10" style="top:110px; left:600px;"><span class="day-num">20</span><span class="date-label">June 29</span></div>
+    <div class="stone" style="top:130px; left:500px;"><span class="day-num">21</span><span class="date-label">June 30</span></div>
+    <div class="stone" style="top:160px; left:410px;"><span class="day-num">22</span><span class="date-label">July 1</span></div>
+</div>
 
-    <div class="poster-page">
-        <div class="stone" style="top:200px; left:50px;">34</div>
-        <div class="stone milestone-5" style="top:140px; left:140px;">35</div>
-        <div class="stone" style="top:120px; left:240px;">36</div>
-        <div class="stone" style="top:150px; left:340px;">37</div>
-        <div class="stone" style="top:220px; left:420px;">38</div>
-        <div class="stone" style="top:300px; left:480px;">39</div>
-        <div class="stone milestone-10" style="top:380px; left:550px;">40 ★</div>
-        <div class="stone" style="top:460px; left:620px;">41</div>
-        <div class="stone" style="top:540px; left:700px;">42</div>
-        <div class="stone" style="top:620px; left:780px;">43</div>
-        
-        <div class="stone" style="top:620px; left:900px; background:#e74c3c; color:#fff; width:80px;">FINISH!</div>
-        <div class="decoration tree" style="top:500px; right:50px;">🌲</div>
-        
-        <div class="instructions">Page 4 of 4: Final Section.</div>
-    </div>
+<div class="page">
+    <div class="title">Summer Expedition: Page 2</div>
+    <div class="tree" style="top:500px; right:100px;">🌲</div>
+
+    <div class="stone" style="top:160px; left:50px;"><span class="day-num">23</span><span class="date-label">July 2</span></div>
+    <div class="stone" style="top:240px; left:80px;"><span class="day-num">24</span><span class="date-label">July 6</span></div>
+    <div class="stone milestone-5" style="top:320px; left:120px;"><span class="day-num">25</span><span class="date-label">July 15</span></div>
+    <div class="stone" style="top:400px; left:150px;"><span class="day-num">26</span><span class="date-label">July 16</span></div>
+    <div class="stone" style="top:480px; left:200px;"><span class="day-num">27</span><span class="date-label">July 17</span></div>
+    <div class="stone" style="top:560px; left:250px;"><span class="day-num">28</span><span class="date-label">July 20</span></div>
+    <div class="stone" style="top:640px; left:320px;"><span class="day-num">29</span><span class="date-label">July 21</span></div>
+    <div class="stone milestone-10" style="top:620px; left:420px;"><span class="day-num">30</span><span class="date-label">July 22</span></div>
+    <div class="stone" style="top:540px; left:480px;"><span class="day-num">31</span><span class="date-label">July 23</span></div>
+    <div class="stone" style="top:460px; left:520px;"><span class="day-num">32</span><span class="date-label">July 24</span></div>
+    <div class="stone" style="top:380px; left:560px;"><span class="day-num">33</span><span class="date-label">July 27</span></div>
+    <div class="stone" style="top:300px; left:600px;"><span class="day-num">34</span><span class="date-label">July 28</span></div>
+    <div class="stone milestone-5" style="top:220px; left:650px;"><span class="day-num">35</span><span class="date-label">July 29</span></div>
+    <div class="stone" style="top:160px; left:740px;"><span class="day-num">36</span><span class="date-label">July 30</span></div>
+    <div class="stone" style="top:240px; left:810px;"><span class="day-num">37</span><span class="date-label">July 31</span></div>
+    <div class="stone" style="top:320px; left:840px;"><span class="day-num">38</span><span class="date-label">Aug 3</span></div>
+    <div class="stone" style="top:400px; left:800px;"><span class="day-num">39</span><span class="date-label">Aug 4</span></div>
+    <div class="stone milestone-10" style="top:480px; left:750px;"><span class="day-num">40</span><span class="date-label">Aug 5</span></div>
+    <div class="stone" style="top:560px; left:780px;"><span class="day-num">41</span><span class="date-label">Aug 6</span></div>
+    <div class="stone" style="top:640px; left:840px;"><span class="day-num">42</span><span class="date-label">Aug 7</span></div>
+    <div class="stone" style="top:660px; left:930px;"><span class="day-num">43</span><span class="date-label">Final</span></div>
+    
+    <div class="stone finish-stone" style="top:580px; left:930px;">FINISH</div>
+</div>
+
 </body>
 </html>
